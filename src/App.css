@@ -1,0 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(#020b3e, #5caff8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.roulette-layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw; /* Full width */
+  text-align: center;
+  overflow: hidden; /* Prevent any overflow */
+  padding-top: 30;
+}

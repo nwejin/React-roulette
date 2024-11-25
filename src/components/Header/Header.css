@@ -1,0 +1,9 @@
+.header-container {
+  padding: 2px;
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
