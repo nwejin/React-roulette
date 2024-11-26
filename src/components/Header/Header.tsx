@@ -1,7 +1,8 @@
 import { Card, CardContent, Typography } from '@mui/material';
 import './Header.css';
 
-export function Header() {
+export function Header(products: any) {
+  const productsList = products.products;
   return (
     <>
       <div className="header-container">
@@ -15,12 +16,12 @@ export function Header() {
             <Typography sx={{ color: '#333', fontSize: 18, fontWeight: 'bold', marginBottom: '1rem' }}>
               잔여 수량
             </Typography>
-            {/* 
-              {Object.entries(products).map(([key, product]) => (
-                <Typography sx={{ color: 'text.secondary', mb: 1.5 }} key={key}>
-                  {product.name}: {product.quantity}개
-                </Typography>
-              ))} */}
+
+            {Object.entries(productsList).map(([key, product]) => (
+              <Typography sx={{ color: 'text.secondary', mb: 1.5 }} key={key}>
+                {/* {product.name}: {product?.quantity}개 */}
+              </Typography>
+            ))}
           </CardContent>
         </Card>
       </div>
