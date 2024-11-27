@@ -1,7 +1,10 @@
 import pointerImg from './pointer.png';
 import './Border.css';
+import { useRoulette } from '../../context';
 
-export function Border(spin: any) {
+export function Border() {
+  const { mustSpin } = useRoulette();
+
   const borderWidth = 15;
   const smallCircleRadius = 3;
   const numCircles = 12;
@@ -11,7 +14,7 @@ export function Border(spin: any) {
   return (
     <>
       <div className="border-container">
-        <div className={`pointer-container ${spin.spin ? 'spinning' : ''}`}>
+        <div className={`pointer-container ${mustSpin ? 'spinning' : ''}`}>
           <img src={pointerImg} alt="pointer" style={{ width: '120px' }} />
         </div>
         <div className="border-wrapper">

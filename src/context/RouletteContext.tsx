@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { PrizeData, ProductList } from '../types'; // 타입 경로에 맞게 수정하세요
+import { PrizeData, ProductList } from '../types';
+import { productList, data } from '../data';
 
 type RouletteContextType = {
   mustSpin: boolean;
@@ -24,8 +25,8 @@ export const RouletteProvider = ({ children }: { children: ReactNode }) => {
   const [mustSpin, setMustSpin] = useState(false);
   const [isResultShow, setIsResultShow] = useState<boolean>(false);
   const [showGif, setShowGif] = useState(false);
-  const [products, setProducts] = useState<ProductList>({});
-  const [prize, setPrize] = useState<PrizeData | null>(null);
+  const [products, setProducts] = useState<ProductList>(productList);
+  const [prize, setPrize] = useState<any>(null);
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 

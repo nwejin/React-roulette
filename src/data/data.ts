@@ -1,14 +1,13 @@
 import { ProductList, PrizeData } from '../types';
-import prize1 from './prize1.png';
-import prize2 from './prize2.png';
+import { images } from './image';
 
 export const productList: ProductList = {
-  prize_1: { name: '상품 1', quantity: 2, img: prize1 },
-  prize_2: { name: '상품 2', quantity: 3, img: prize2 },
-  prize_3: { name: '상품 3', quantity: 5, img: prize1 },
-  prize_4: { name: '상품 4', quantity: 10, img: prize2 },
-  prize_5: { name: '상품 5', quantity: 30, img: prize1 },
-  prize_6: { name: '상품 6', quantity: 150, img: prize2 },
+  prize_1: { name: '강아지', quantity: 2, img: images.dog, icon: '🐶' },
+  prize_2: { name: '고양이', quantity: 3, img: images.cat, icon: '🐱' },
+  prize_3: { name: '여우', quantity: 5, img: images.fox, icon: '🦊' },
+  prize_4: { name: '돼지', quantity: 10, img: images.pig, icon: '🐷' },
+  prize_5: { name: '판다', quantity: 30, img: images.panda, icon: '🐼' },
+  prize_6: { name: '원숭이', quantity: 150, img: images.monkey, icon: '🙈' },
 };
 
 const rouletteRed = '#CD2B33';

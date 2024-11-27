@@ -15,5 +15,5 @@ export type PrizeData = {
 };
 
 export type ProductList = {
-  [key: string]: { name: string; quantity: number; img: string };
+  [key: string]: { name: string; quantity: number; img: string; icon: string };
 };
